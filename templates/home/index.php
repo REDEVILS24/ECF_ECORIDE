@@ -11,6 +11,7 @@
 
     <?php
     require_once "../header/header.php";
+    require_once "../footer/footer.php";
     ?>
 
 </body>
