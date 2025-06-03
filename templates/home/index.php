@@ -8,7 +8,11 @@
 </head>
 
 <body>
-    <h1>EcoRide</h1>
+
+    <?php
+    require_once "../header/header.php";
+    ?>
+
 </body>
 
 </html>

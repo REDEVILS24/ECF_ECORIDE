@@ -46,4 +46,4 @@ export const allRoutes = [
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
-export const websiteName = "Quai Antique";
+export const websiteName = "ECF_ECORIDE";
