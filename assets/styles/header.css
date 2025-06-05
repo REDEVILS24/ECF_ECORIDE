@@ -64,4 +64,9 @@ li:hover {
   font-family: var(--font-body);
 }
 
+.voiture {
+  width: 100%;
+  height: 100%;
+}
+
 /* responsive*/

@@ -29,6 +29,7 @@
             </ul>
         </nav>
     </section>
+    <img src="/IMAGE/Voiturepoursite1.jpg" alt="" class="voiture">
 </body>
 
 </html>
