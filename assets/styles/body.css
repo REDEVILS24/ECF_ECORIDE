@@ -1,0 +1,45 @@
+.presentation {
+  display: flex;
+  height: auto;
+  width: auto;
+}
+
+.img {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bloc-presentation {
+  font-family: var(--font-body);
+  border: solid black 2px;
+  height: auto;
+  width: 480px;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  text-align: justify;
+  border-radius: 10px;
+  font-size: var(--p-size);
+}
+
+.titre {
+  font-family: var(--font-titre);
+  color: var(--secondaire);
+  text-align: center;
+}
+
+.covoiturage {
+  display: flex;
+  height: auto;
+  width: auto;
+}
+.bloc-covoiturage {
+  font-family: var(--font-body);
+  border: solid black 2px;
+  height: auto;
+  width: 480px;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  text-align: justify;
+  border-radius: 10px;
+  font-size: var(--p-size);
+}
