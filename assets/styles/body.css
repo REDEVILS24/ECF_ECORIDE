@@ -2,11 +2,14 @@
   display: flex;
   height: auto;
   width: auto;
+  justify-content: space-around;
 }
 
 .img {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .bloc-presentation {
@@ -14,11 +17,29 @@
   border: solid black 2px;
   height: auto;
   width: 480px;
-  padding: 10px;
+  padding: 20px;
   margin: 10px 10px 10px 10px;
   text-align: justify;
   border-radius: 10px;
   font-size: var(--p-size);
+}
+.bloc-presentation:hover {
+  transform: scale(1.1);
+}
+
+.bloc-presentation1 {
+  font-family: var(--font-body);
+  border: solid black 2px;
+  height: auto;
+  width: 480px;
+  padding: 20px;
+  margin: 10px 10px 10px 10px;
+  text-align: justify;
+  border-radius: 10px;
+  font-size: var(--p-size);
+}
+.bloc-presentation1:hover {
+  transform: scale(1.1);
 }
 
 .titre {
@@ -29,17 +50,94 @@
 
 .covoiturage {
   display: flex;
+  justify-content: space-around;
   height: auto;
   width: auto;
 }
+
 .bloc-covoiturage {
   font-family: var(--font-body);
   border: solid black 2px;
   height: auto;
   width: 480px;
-  padding: 10px;
+  padding: 20px;
   margin: 10px 10px 10px 10px;
   text-align: justify;
   border-radius: 10px;
   font-size: var(--p-size);
+}
+.bloc-covoiturage:hover {
+  transform: scale(1.1);
+}
+
+.bloc-covoiturage1 {
+  font-family: var(--font-body);
+  border: solid black 2px;
+  height: auto;
+  width: 480px;
+  padding: 20px;
+  margin: 10px 10px 10px 10px;
+  text-align: justify;
+  border-radius: 10px;
+  font-size: var(--p-size);
+}
+
+.bloc-covoiturage1:hover {
+  transform: scale(1.1);
+}
+
+.form {
+  display: flex;
+  margin: 30px 0 30px 0;
+  justify-content: center;
+  background-color: var(--accent);
+  height: 125px;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--h2-size);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.form input {
+  text-align: center;
+}
+
+.btn_rechercher {
+  text-align: center;
+  font-size: var(--h3-size);
+  color: var(--secondaire);
+  background-color: var(--primaire);
+  height: 30px;
+  width: 125px;
+}
+
+.btn_rechercher:hover {
+  background-color: var(--white);
+  color: var(--primaire);
+
+  transform: rotate(-0.01turn) scale(1.2);
+}
+
+.trajet {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  color: var(--white);
+  padding: 20px;
+  background-color: var(--primaire);
+  height: 100px;
+  width: 400px;
+  font-size: var(--h2-size);
+}
+.btn:hover {
+  color: var(--secondaire);
+  background-color: var(--accent);
+  transform: scale(1.2);
+  font-size: var(--h1-size);
+  font-weight: bold;
 }

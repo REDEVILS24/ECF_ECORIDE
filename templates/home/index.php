@@ -38,20 +38,20 @@
         </div>
     </section>
     <section class="presentation">
-        <div class="bloc-presentation">
+        <div class="bloc-presentation1">
             <h3 class="titre">ESPRIT PARTAGE</h3>
             <p>"Partagez plus qu'un trajet, partagez un moment"
                 "Créez du lien social dans vos déplacements"
                 "Une communauté bienveillante de voyageurs éco-responsables"</p>
         </div>
-        <div class="bloc-presentation">
+        <div class="bloc-presentation1">
             <h3 class="titre">VALEURS ECORIDE</h3>
             <p>Solidarité : Entraide entre conducteurs et passagers
                 Respect : De l'environnement et des autres
                 Convivialité : Voyager ensemble, c'est plus sympa
                 Économie : Diviser les coûts pour tous</p>
         </div>
-        <div class="bloc-presentation">
+        <div class="bloc-presentation1">
             <h3 class="titre">CALL-TO-ACTION INSPIRANT</h3>
             <p>"Rejoignez la communauté EcoRide et donnez du sens à vos trajets !"
                 Ton à adopter : Positif, engagé, proche des utilisateurs, axé sur l'impact collectif ! 🚗💚
@@ -60,8 +60,8 @@
 
     </section>
     <!-- Mise en place de ou des photos avec pour but d'aerer le site et de mettre de la couleur -->
-    <section class="img">
-        <div>
+    <section>
+        <div class="img">
             <img src="/image/Voiture_désert.jpg" alt="" width="400" height="200">
             <img src="/image/Voiture_foret.jpg" alt="" width="400" height="200">
         </div>
@@ -69,7 +69,7 @@
 
     <!-- Formulaire pour le choix des dates et la destination avec le point de départ -->
     <section class="form">
-        <div class="form">
+        <div class="formulaire">
 
             <form action="" method="post">
 
@@ -83,7 +83,7 @@
                 <input type="text" name="destination">
                 <label for="passager">Passager:</label>
                 <input type="number" name="passager" min="1" max="4" value="1">
-                <input type="submit" name="rechercher" value="Rechercher">
+                <input type="submit" name="rechercher" value="Rechercher" class="btn_rechercher">
 
             </form>
         </div>
@@ -91,40 +91,42 @@
     <!-- Section pour proposition de covoiturage pour que les gens se proposent  -->
     <section class="covoiturage">
         <div class="bloc-covoiturage">
-            <h3>AVANTAGE ÉCONOMIQUE</h3>
+            <h3 class="titre">AVANTAGE ÉCONOMIQUE</h3>
             <p>"Divisez vos frais d'essence, d'autoroute et de stationnement"
                 "Rentabilisez vos trajets quotidiens ou occasionnels"
                 "Votre voiture devient une source de revenus complémentaires"</p>
         </div>
         <div class="bloc-covoiturage">
-            <h3>IMPACT ENVIRONNEMENTAL</h3>
+            <h3 class="titre">IMPACT ENVIRONNEMENTAL</h3>
             <p>"Optimisez l'utilisation de votre véhicule"
                 "Réduisez le nombre de voitures sur les routes"
                 "Devenez acteur du changement écologique"</p>
         </div>
-        <div class="bloc-covoiturage">
-            <h3>DIMENSION SOCIALE</h3>
+    </section>
+    <section class="covoiturage">
+        <div class="bloc-covoiturage1">
+            <h3 class="titre">DIMENSION SOCIALE</h3>
             <p>"Rompez la solitude des longs trajets"
                 "Rencontrez des personnes de votre région"
                 "Créez des liens durables avec vos passagers"</p>
         </div>
-        <div class="bloc-covoiturage">
-            <h3>SIMPLICITÉ</h3>
+        <div class="bloc-covoiturage1">
+            <h3 class="titre">SIMPLICITÉ</h3>
             <p>"Publiez votre trajet en 2 minutes"
                 "Choisissez vos passagers selon vos critères"
                 "Gérez facilement vos réservations"</p>
         </div>
 
-        <div class="bloc-covoiturage">
-            <h3> CALL-TO-ACTION</h3>
+        <div class="bloc-covoiturage1">
+            <h3 class="titre"> CALL-TO-ACTION</h3>
             <p>"Proposez votre premier trajet et rejoignez les conducteurs EcoRide !"
                 "Vos sièges vides n'attendent que vous"</p>
         </div>
-        <div>
-            <input type="button" value="Publier un trajet">
-        </div>
-    </section>
 
+    </section>
+    <div class="trajet">
+        <input class="btn" type="button" value="Publier un trajet">
+    </div>
 
 
     <?php
