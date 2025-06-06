@@ -91,16 +91,19 @@
   margin: 30px 0 30px 0;
   justify-content: center;
   background-color: var(--accent);
-  height: 125px;
+  height: 115px;
   align-items: center;
   gap: 20px;
   font-size: var(--h2-size);
   font-weight: bold;
   font-style: italic;
+  border-radius: 70px 70px;
 }
 
 .form input {
   text-align: center;
+  height: 30px;
+  font-size: var(--h3-size);
 }
 
 .btn_rechercher {

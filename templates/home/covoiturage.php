@@ -6,35 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="stylesheet" href="/assets/styles/body.css">
-
-    <title>EcoRide</title>
-
-
+    <title>Covoiturage</title>
 </head>
 
 <body>
+
     <?php
     // Mise en place du header provenant d'une autre page
     require_once "../header/header.php";
-
-
     ?>
 
     <?php
-    // Mise en place du body provenant d'une autre page
-    require_once "../body/accueil.php";
-
-
+    require_once "../formulaire/covoiturage.php";
     ?>
-
-
 
     <?php
 
     // Mise en place du footer provenant d'une autre page
     require_once "../footer/footer.php";
     ?>
-
 
 </body>
 
