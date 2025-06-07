@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="stylesheet" href="/assets/styles/body.css">
-    <title>Covoiturage</title>
+    <title>Mon profil</title>
 </head>
 
 <body>
-
     <?php
     // Mise en place du header provenant d'une autre page
     require_once "../header/header.php";
+
+
     ?>
+
+    <?php
+    // Mise en place monprofil provenant d'une autre page
+    require_once "E:\PROJET_STUDI\ECF_ECORIDE\admin\utilisateur\profil.php";
+
+
+    ?>
+
 
 
     <?php
@@ -22,7 +31,6 @@
     // Mise en place du footer provenant d'une autre page
     require_once "../footer/footer.php";
     ?>
-
 </body>
 
 </html>

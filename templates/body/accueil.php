@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="stylesheet" href="/assets/styles/body.css">
+    <link rel="stylesheet" href="/assets/styles/charte.css">
+
 
     <title>EcoRide</title>
 
@@ -120,9 +122,8 @@
 
     </section>
     <div class="trajet">
-        <input class="btn" type="button" value="Publier un trajet">
+        <a href="/templates/home/covoiturage.php"> <input class="btn" type="button" value="Publier un trajet"></a>
     </div>
-
 
 
 

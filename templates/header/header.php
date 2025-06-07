@@ -25,6 +25,7 @@
                     <li><a href="/templates/home/covoiturage.php">Covoiturage</a></li>
                     <li><a href="#">Connexion</a></li>
                     <li><a href="#">Deconnexion</a></li>
+                    <li><a href="/templates/home/profil.php">Mon profil</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>

@@ -9,9 +9,6 @@ h1 {
 .navigation {
   display: flex;
 }
-.recherche {
-  margin-left: 400px;
-}
 
 .head {
   display: flex;
