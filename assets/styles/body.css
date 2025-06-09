@@ -104,6 +104,7 @@
   text-align: center;
   height: 30px;
   font-size: var(--h3-size);
+  border-radius: 4px;
 }
 
 .btn_rechercher {
@@ -136,6 +137,7 @@
   height: 100px;
   width: 400px;
   font-size: var(--h2-size);
+  border-radius: 0 20px;
 }
 .btn:hover {
   color: var(--secondaire);

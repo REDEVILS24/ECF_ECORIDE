@@ -1,0 +1,76 @@
+h1 {
+  font-size: var(--h1-size);
+  text-align: center;
+}
+legend {
+  font-size: var(--h3-size);
+  font-weight: bold;
+  border: var(--accent);
+  text-decoration: underline;
+}
+
+fieldset {
+  height: 600px;
+  width: 450px;
+  text-align: justify;
+  padding: 0 0 0 10%;
+  gap: 3px;
+  align-content: center;
+  border: solid 8px var(--accent);
+  background-color: var(--white);
+  color: var(--secondaire);
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  text-align: center;
+  margin-bottom: 13px;
+  padding: 3px;
+}
+select {
+  margin-bottom: 13px;
+}
+.btn_inscription {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn_reset_inscri {
+  width: 80px;
+  height: 30px;
+  font-size: var(--p-size);
+  border-radius: 10px;
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.btn_reset_inscri:hover {
+  font-size: var(--h3-size);
+  background-color: var(--primaire);
+  color: var(--accent);
+  transform: scale(1.4);
+  font-weight: bold;
+}
+
+.btn_enregistrement {
+  width: 200px;
+  height: 30px;
+  font-size: var(--p-size);
+  border-radius: 10px;
+  background-color: var(--accent);
+  color: var(--white);
+}
+.btn_enregistrement:hover {
+  font-size: var(--h3-size);
+  background-color: var(--primaire);
+  color: var(--accent);
+  transform: scale(1.4);
+  font-weight: bold;
+}

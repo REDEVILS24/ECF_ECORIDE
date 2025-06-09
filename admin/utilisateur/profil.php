@@ -31,6 +31,12 @@
                 <div class="adresse info_utilisateur">
                     adresse postal
                 </div>
+                <div class="premiere_circulation info_utilisateur">
+                    date de premiere_circulation
+                </div>
+                <div class="energie info_utilisateur">
+                    energie
+                </div>
             </section>
             <section>
                 <div class="code_postal info_utilisateur">
@@ -45,9 +51,17 @@
                 <div class="type_utilisateur info_utilisateur">
                     type_utilisateur
                 </div>
-                <div class="date-creation info_utilisateur">
-                    date-creation
+                <div class="modele_voiture info_utilisateur">
+                    modele voiture
                 </div>
+                <div class="marque_voiture info_utilisateur">
+                    marque_voiture
+                </div>
+                <div class="couleur_voiture info_utilisateur">
+                    couleur_voiture
+                </div>
+
+
 
             </section>
         </section>

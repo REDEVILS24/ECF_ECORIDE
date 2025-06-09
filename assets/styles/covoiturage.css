@@ -7,6 +7,9 @@ h1 {
 legend {
   font-size: var(--h3-size);
   text-decoration: underline;
+  text-align: start;
+  padding: 5px;
+  font-weight: bold;
 }
 
 fieldset {
@@ -33,20 +36,16 @@ form {
   margin: 10px 60px 0 60px;
 }
 
-legend {
-  text-align: start;
-  padding: 5px;
-}
-
 .btn_covoit {
-  background-color: var(--primaire);
-  color: var(--secondaire);
   padding: 10px;
   font-size: var(--p-size);
+  background-color: var(--accent);
+  color: var(--white);
+  border-radius: 10px;
 }
 .btn_covoit:hover {
-  color: var(--secondaire);
-  background-color: var(--accent);
+  background-color: var(--primaire);
+  color: var(--accent);
   transform: scale(1);
   font-size: var(--h3-size);
   font-weight: bold;
