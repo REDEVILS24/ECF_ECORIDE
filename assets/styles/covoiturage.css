@@ -48,5 +48,6 @@ form {
   color: var(--accent);
   transform: scale(1);
   font-size: var(--h3-size);
+  cursor: pointer;
   font-weight: bold;
 }

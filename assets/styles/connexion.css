@@ -1,0 +1,66 @@
+.titre {
+  font-family: var(--font-titre);
+  font-size: var(--h1-size);
+  text-transform: uppercase;
+}
+
+.connexion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--h3-size);
+  gap: 5px;
+  border: var(--succes) 5px solid;
+  border-radius: 10px;
+  height: 250px;
+  width: 400px;
+}
+
+.formulaire {
+  display: flex;
+  justify-content: center;
+}
+
+.redirection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-body);
+  margin: 5px;
+}
+
+.redirection a {
+  display: flex;
+  justify-content: center;
+  font-size: var(--p-size) !important;
+  margin: 5px;
+}
+
+p {
+  font-family: var(--font-body);
+}
+.redirection a:hover {
+  color: var(--accent);
+  transform: scale(2, 1);
+  font-size: var(--h3-size);
+}
+
+.btn_connexion {
+  width: 200px;
+  height: 30px;
+  font-size: var(--p-size);
+  border-radius: 10px;
+  background-color: var(--accent);
+  color: var(--white);
+}
+.btn_connexion:hover {
+  font-size: var(--h3-size);
+  background-color: var(--primaire);
+  color: var(--accent);
+  transform: scale(1.4);
+  font-weight: bold;
+  cursor: pointer;
+}

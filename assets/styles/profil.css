@@ -115,6 +115,7 @@ img {
   color: var(--primaire);
   transform: scale(1.5);
   box-shadow: 4px 4px 2px 1px var(--secondaire);
+  cursor: pointer;
 }
 .supprimer_compte {
   width: 300px;
@@ -135,4 +136,5 @@ img {
   color: var(--secondaire);
   transform: scale(1.5);
   box-shadow: 4px 4px 2px 1px var(--erreur);
+  cursor: pointer;
 }

@@ -1,0 +1,11 @@
+# Ignorer tous les fichiers .log
+*.log
+
+# Ignorer un dossier spécifique
+/admin/
+
+# Ignorer un fichier spécifique dans le répertoire racine
+/fichier_a_ignorer.txt
+
+# Ignorer tous les fichiers dans un dossier spécifique
+dossier/*.

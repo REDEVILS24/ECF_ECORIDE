@@ -57,6 +57,7 @@ select {
   color: var(--accent);
   transform: scale(1.4);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .btn_enregistrement {
@@ -72,5 +73,25 @@ select {
   background-color: var(--primaire);
   color: var(--accent);
   transform: scale(1.4);
+  cursor: pointer;
   font-weight: bold;
+}
+
+.connexion {
+  display: flex;
+  justify-content: center;
+  font-size: var(--h2-size);
+}
+
+.connexion a {
+  font-size: var(--p-size);
+  margin: 10px;
+  text-decoration: underline;
+}
+
+.connexion a:hover {
+  color: var(--accent);
+  transform: scale(2, 0.5);
+  font-size: var(--h2-size);
+  cursor: pointer;
 }

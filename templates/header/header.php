@@ -24,7 +24,7 @@
                     <li><a href="/templates/home/index.php">Accueil</a></li>
                     <li><a href="/templates/home/covoiturage.php">Covoiturage</a></li>
                     <li><a href="/templates/home/inscription.php">Inscription</a></li>
-                    <li><a href="#">Connexion</a></li>
+                    <li><a href="/templates/home/connexion.php">Connexion</a></li>
                     <li><a href="#">Deconnexion</a></li>
                     <li><a href="/templates/home/profil.php">Mon profil</a></li>
                     <li><a href="#">Contact</a></li>
