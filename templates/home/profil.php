@@ -19,7 +19,7 @@
 
     <?php
     // Mise en place monprofil provenant d'une autre page
-    require_once "E:\PROJET_STUDI\ECF_ECORIDE\admin\utilisateur\profil.php";
+    require_once('../../admin/utilisateur/profil.php');
 
 
     ?>

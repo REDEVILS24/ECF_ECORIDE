@@ -2,10 +2,20 @@
 *.log
 
 # Ignorer un dossier spécifique
-/admin/
+admin/
+config/
+image/
+
 
 # Ignorer un fichier spécifique dans le répertoire racine
-/fichier_a_ignorer.txt
+/dockerfile
+/docker-compose.yml
+
 
 # Ignorer tous les fichiers dans un dossier spécifique
-dossier/*.
+dossier/*
+
+# Garder les fichiers Docker mais ignorer les données
+# Dockerfile
+# docker-compose.yml
+mysql/data/
