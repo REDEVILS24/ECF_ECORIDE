@@ -19,6 +19,7 @@
         </div>
 
         <div class="navigation">
+
             <nav>
                 <ul class="liste">
                     <li><a href="/templates/home/index.php">Accueil</a></li>
@@ -28,20 +29,30 @@
                     <li><a href="#">Deconnexion</a></li>
                     <li><a href="/templates/home/profil.php">Mon profil</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li class="navigation recherche_responsive">
+                        <input type="search" name="recherche">
+                        <button class="btn_recherche">Rechercher</button>
+                    </li>
                 </ul>
+
             </nav>
-
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
 
-        <div class="navigation recherche">
-            <input type="search" name="recherche">
-            <button class="btn_recherche">Rechercher</button>
-        </div>
+
     </section>
 
 
 
-
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.querySelector('.liste').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
