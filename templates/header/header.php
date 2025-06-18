@@ -13,9 +13,13 @@
 <body>
     <section class="head">
         <div class="navigation">
-            <img src="/IMAGE/LOGO_ICONE/6bc25e61-f87a-4edf-a690-72058f38ab68.jpg" alt="Ecoride logo"
-                class="logo nav-gauche">
-            <h1 class="titre">ECORIDE</h1>
+            <a href="/templates/home/index.php">
+                <img src="/IMAGE/LOGO_ICONE/6bc25e61-f87a-4edf-a690-72058f38ab68.jpg" alt="Ecoride logo"
+                    class="logo nav-gauche"></a>
+            <a href="/templates/home/index.php">
+                <h1 class="titre">ECORIDE</h1>
+            </a>
+
         </div>
 
         <div class="navigation">

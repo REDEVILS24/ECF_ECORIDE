@@ -60,6 +60,12 @@
     <section>
         <div class="img">
             <img src="/image/Voiture_désert.jpg" alt="" width="400" height="200">
+
+            <div class="trajet-responsive">
+                <a href="/templates/home/covoiturage.php"> <input class="btn" type="button"
+                        value="Publier un trajet"></a>
+            </div>
+
             <img src="/image/Voiture_foret.jpg" alt="" width="400" height="200">
         </div>
     </section>
