@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="stylesheet" href="/assets/styles/body.css">
     <link rel="stylesheet" href="/assets/styles/charte.css">
+    <script src="/templates/js/accueil.js" defer></script>
 
 
     <title>EcoRide</title>
@@ -79,11 +80,11 @@
                 <label for="date_depart">Date de départ:</label>
                 <input type="date" name="date_depart">
                 <label for="depart">Départ:</label>
-                <input type="text" name="depart">
+                <input class="input" type="text" name="depart">
                 <label for="date_arrivee">Date d'arrivée:</label>
                 <input type="date" name="date_arrivee">
                 <label for="destination">Déstination:</label>
-                <input type="text" name="destination">
+                <input class="input" type="text" name="destination">
                 <label for="passager">Passager:</label>
                 <input type="number" name="passager" min="1" max="4" value="1">
                 <input type="submit" name="rechercher" value="Rechercher" class="btn_rechercher">
@@ -130,7 +131,6 @@
     <div class="trajet">
         <a href="/templates/home/covoiturage.php"> <input class="btn" type="button" value="Publier un trajet"></a>
     </div>
-
 
 
 
