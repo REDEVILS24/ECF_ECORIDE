@@ -54,7 +54,7 @@ class User
 
     public function getUserById($id)
     {
-        $sql = "SELECT * FROM user WHERE id =?";
+        $sql = "SELECT * FROM utilisateur WHERE id =?";
 
         $stmt = $this->db->prepare($sql);
 
@@ -65,6 +65,7 @@ class User
         return $result;
     }
     public function createUser(
+
         $nom,
         $prenom,
         $pseudo,
@@ -78,6 +79,7 @@ class User
         $credits,
         $role
     ) {
+        $hashedMdp = password_hash($mdp, PASSWORD_DEFAULT);
         $sql = "INSERT INTO utilisateur (nom, prenom, pseudo, email, mdp, dateDeNaissance, adresse, codePostal, ville, permis, credits, role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
@@ -85,7 +87,7 @@ class User
             $prenom,
             $pseudo,
             $email,
-            $mdp,
+            $hashedMdp,
             $dateDeNaissance,
             $adresse,
             $codePostal,
@@ -112,6 +114,7 @@ class User
         $role,
         $id
     ) {
+        $hashedMdp = password_hash($mdp, PASSWORD_DEFAULT);
         $sql = "UPDATE utilisateur SET nom=?, prenom=?, pseudo=?, email=?, mdp=?, dateDeNaissance=?, adresse=?, codePostal=?, ville=?, permis=?, credits=?, role=? WHERE id=?";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
@@ -119,7 +122,7 @@ class User
             $prenom,
             $pseudo,
             $email,
-            $mdp,
+            $hashedMdp,
             $dateDeNaissance,
             $adresse,
             $codePostal,
@@ -135,7 +138,7 @@ class User
 
     public function deleteUser($id)
     {
-        $sql = "DELETE FROM user WHERE id = ?";
+        $sql = "DELETE FROM utilisateur WHERE id = ?";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$id]);
         return $stmt->rowCount();
