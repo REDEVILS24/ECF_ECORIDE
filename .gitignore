@@ -1,21 +1,20 @@
-# Ignorer tous les fichiers .log
+# Variables d'environnement
+.env
+
+# Fichiers de log
 *.log
 
-# Ignorer un dossier spécifique
-admin/
-config/
-image/
+# Dossiers temporaires
+tmp/
+temp/
 
+# Données MySQL
+mysql/data/
 
-# Ignorer un fichier spécifique dans le répertoire racine
+# Fichiers Docker (optionnel selon ton choix)
 /dockerfile
 /docker-compose.yml
 
-
-# Ignorer tous les fichiers dans un dossier spécifique
+# Dossiers spécifiques si nécessaire
+image/
 dossier/*
-
-# Garder les fichiers Docker mais ignorer les données
-# Dockerfile
-# docker-compose.yml
-mysql/data/
