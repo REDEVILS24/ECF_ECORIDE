@@ -1,5 +1,5 @@
 <?php
-require_once('../assets/controllers/User.php');
+require_once('./assets/controllers/user.php');
 // récuperation de la methode et de l'url
 
 $url = $_SERVER["REQUEST_URI"];
@@ -12,7 +12,7 @@ $endpoint = $_GET['endpoint'] ?? 'default';
 header('Content-Type: application/json');
 
 
-$user = new User(1, "test", "test", "test", "test", "test", "test", "test", 1, "test", "test", 1, "test", null);
+$user = new User();
 
 $userData = $user->getUserById(1);
 
