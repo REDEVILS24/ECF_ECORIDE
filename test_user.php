@@ -1,7 +1,7 @@
 <?php
 require_once("assets/controllers/user.php");
 
-$user = new User(1, "Test", "User", "testeur", "test@email.com", "password123", "1990-01-01", "1 rue Test", 12345, "TestVille", "PERMIT123", 20, "visiteur", null);
+$user = new User();
 
 $result = $user->createUser(
     "Securite",
@@ -21,7 +21,7 @@ $result = $user->createUser(
 echo "✅ Utilisateur créé (hashé) : " . $result . "<br>";
 
 // Tester plusieurs IDs pour trouver le bon
-for ($id = 12; $id <= 20; $id++) {
+for ($id = 0; $id <= 50; $id++) {
     $userData = $user->getUserById($id);
     if ($userData && $userData['pseudo'] == 'secureuser888') {
         echo "🎯 Trouvé ! ID: $id<br>";

@@ -1,55 +1,15 @@
 <?php
-require_once("../admin/bdd/config.php");
+require_once("./admin/bdd/config.php");
 
 
 class User
 {
     private $db;
-    private int $id;
-    private string $nom;
-    private string $prenom;
-    private string $pseudo;
-    private string $email;
-    private string $mdp;
-    private $dateDeNaissance;
-    private string $adresse;
-    private int $codePostal;
-    private string $ville;
-    private string $permis;
-    private int $credits;
-    private string $role;
 
-
-    public function __construct(
-        int $id,
-        string $nom,
-        string $prenom,
-        string $pseudo,
-        string $email,
-        string $mdp,
-        $dateDeNaissance,
-        string $adresse,
-        int $codePostal,
-        string $ville,
-        string $permis,
-        int $credits,
-        string $role,
-        $db
-    ) {
+    public function __construct()
+    {
         $this->db = Database::connect();
-        $this->id = $id;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->pseudo = $pseudo;
-        $this->email = $email;
-        $this->mdp = $mdp;
-        $this->dateDeNaissance = $dateDeNaissance;
-        $this->adresse = $adresse;
-        $this->codePostal = $codePostal;
-        $this->ville = $ville;
-        $this->permis = $permis;
-        $this->credits = $credits;
-        $this->role = $role;
+
     }
 
     public function getUserById($id)
@@ -143,5 +103,41 @@ class User
         $stmt->execute([$id]);
         return $stmt->rowCount();
     }
+
+    public function login($email, $mdp)
+    {
+        $sql = "SELECT * FROM utilisateur WHERE email= ?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
+
+        if ($user && password_verify($mdp, $user['mdp'])) {
+            return $user;
+        } else {
+            return false;
+        }
+
+
+    }
+    public function updateCredits($userId, $montant)
+    {
+        $sql = "UPDATE utilisateur SET credits = credits + ? WHERE id = ?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$montant, $userId]);
+        return $stmt->rowCount();
+    }
+
+    public function getCredits($userId)
+    {
+        $sql = "SELECT credits FROM utilisateur WHERE id =?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$userId]);
+        $result = $stmt->fetch();
+        return $result ? $result['credits'] : 0;
+
+    }
+
+
+
 
 }
