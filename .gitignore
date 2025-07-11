@@ -18,3 +18,6 @@ mysql/data/
 # Dossiers spécifiques si nécessaire
 image/
 dossier/*
+
+vendor/
+composer.lock
