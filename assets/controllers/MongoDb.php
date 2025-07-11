@@ -41,4 +41,58 @@ class MongoDb
         $result = $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
         return $result->getDeletedCount();
     }
+    public function insertAvis($data)
+    {
+        $collection = $this->database->selectCollection('avis');
+        $result = $collection->insertOne($data);
+        return $result->getInsertedCount();
+    }
+
+    public function getAvis()
+    {
+        $collection = $this->database->selectCollection('avis');
+        $cursor = $collection->find();
+        return $cursor->toArray();
+    }
+    public function updateAvis($id, $data)
+    {
+        $collection = $this->database->selectCollection('avis');
+        $result = $collection->updateOne(['_id' => new MongoDB\BSON\ObjectId($id)], ['$set' => $data]);
+        return $result->getModifiedCount();
+    }
+
+    public function deleteAvis($id)
+    {
+        $collection = $this->database->selectCollection('avis');
+        $result = $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+        return $result->getDeletedCount();
+    }
+
+    public function insertPreference($data)
+    {
+        $collection = $this->database->selectCollection('preferences');
+        $result = $collection->insertOne($data);
+        return $result->getInsertedCount();
+    }
+
+    public function getPreferences()
+    {
+        $collection = $this->database->selectCollection('preferences');
+        $cursor = $collection->find();
+        return $cursor->toArray();
+    }
+    public function updatePreference($id, $data)
+    {
+        $collection = $this->database->selectCollection('preferences');
+        $result = $collection->updateOne(['_id' => new MongoDB\BSON\ObjectId($id)], ['$set' => $data]);
+        return $result->getModifiedCount();
+    }
+
+    public function deletePreference($id)
+    {
+        $collection = $this->database->selectCollection('preferences');
+        $result = $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+        return $result->getDeletedCount();
+    }
+
 }
