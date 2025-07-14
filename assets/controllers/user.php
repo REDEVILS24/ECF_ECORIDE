@@ -1,5 +1,5 @@
 <?php
-require_once("./admin/bdd/config.php");
+require_once("../admin/bdd/config.php");
 
 
 class User
@@ -31,7 +31,7 @@ class User
         $pseudo,
         $email,
         $mdp,
-        $dateDeNaissance,
+        $date_naissance,
         $adresse,
         $codePostal,
         $ville,
@@ -40,7 +40,7 @@ class User
         $role
     ) {
         $hashedMdp = password_hash($mdp, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO utilisateur (nom, prenom, pseudo, email, mdp, dateDeNaissance, adresse, codePostal, ville, permis, credits, role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO utilisateur (nom, prenom, pseudo, email, mdp, date_naissance, adresse, codePostal, ville, permis, credits, role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
             $nom,
@@ -48,7 +48,7 @@ class User
             $pseudo,
             $email,
             $hashedMdp,
-            $dateDeNaissance,
+            $date_naissance,
             $adresse,
             $codePostal,
             $ville,
@@ -65,7 +65,7 @@ class User
         $pseudo,
         $email,
         $mdp,
-        $dateDeNaissance,
+        $date_naissance,
         $adresse,
         $codePostal,
         $ville,
@@ -75,7 +75,7 @@ class User
         $id
     ) {
         $hashedMdp = password_hash($mdp, PASSWORD_DEFAULT);
-        $sql = "UPDATE utilisateur SET nom=?, prenom=?, pseudo=?, email=?, mdp=?, dateDeNaissance=?, adresse=?, codePostal=?, ville=?, permis=?, credits=?, role=? WHERE id=?";
+        $sql = "UPDATE utilisateur SET nom=?, prenom=?, pseudo=?, email=?, mdp=?, date_naissance=?, adresse=?, codePostal=?, ville=?, permis=?, credits=?, role=? WHERE id=?";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
             $nom,
@@ -83,7 +83,7 @@ class User
             $pseudo,
             $email,
             $hashedMdp,
-            $dateDeNaissance,
+            $date_naissance,
             $adresse,
             $codePostal,
             $ville,

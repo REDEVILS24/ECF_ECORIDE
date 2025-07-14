@@ -1,5 +1,5 @@
 <?php
-require_once("./admin/bdd/config.php");
+require_once("../admin/bdd/config.php");
 
 class Reservation
 {

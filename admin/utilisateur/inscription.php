@@ -14,7 +14,7 @@
 <body>
 
     <h1>INSCRIPTION</h1>
-    <form action="/admin/utilisateur/inscription.php" method="post">
+    <form action="" method="post" id="form-inscription">
         <fieldset>
             <legend>Remplissez tout les champs </legend>
 
@@ -37,9 +37,22 @@
             <label for="mdp">Mot de passe:</label>
             <input type="password" name="mdp" required><br>
 
+            <label for="adresse">Adresse (optionnel):</label>
+            <input type="text" name="adresse"><br>
+
+            <label for="codePostal">Code postal (optionnel):</label>
+            <input type="number" name="codePostal" min="10000" max="99999"><br>
+
+            <label for="ville">Ville (optionnel):</label>
+            <input type="text" name="ville"><br>
+
+            <label for="permis">Numéro de permis (optionnel):</label>
+            <input type="text" name="permis"><br>
+
             <div class="btn_inscription">
                 <button class="btn_reset_inscri" type="reset" name="reset">Reset</button>
-                <button class="btn_enregistrement" type="submit" name="enregistrer">Valider le compte</button>
+                <button id="btn-inscription" class="btn_enregistrement" type="submit" name="enregistrer">Valider le
+                    compte</button>
             </div>
 
         </fieldset>
@@ -50,6 +63,7 @@
             <p><a href="/templates/home/connexion.php">Vous avez déjà un compte ? connectez-vous !</a></p>
         </div>
     </section>
+    <script src="/assets/scripts/inscriptions.js"></script>
 </body>
 
 </html>

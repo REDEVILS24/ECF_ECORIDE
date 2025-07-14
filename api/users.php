@@ -1,11 +1,14 @@
 <?php
-require_once('./assets/controllers/user.php');
+require_once('../assets/controllers/user.php');
 // récuperation de la methode et de l'url
 
 $url = $_SERVER["REQUEST_URI"];
 $method = $_SERVER["REQUEST_METHOD"];
 
-$endpoint = $_GET['endpoint'] ?? 'default';
+$json = file_get_contents('php://input');
+$data = json_decode($json, true);
+
+$endpoint = $data['endpoint'] ?? 'default';
 
 // Reponse JSON 
 
@@ -20,21 +23,21 @@ if ($endpoint === 'test') {
     echo json_encode(['message' => 'Endpoint TEST fonctionne !', 'data' => 'Données de test']);
 } else if ($endpoint === 'users') {
     echo json_encode(['utilisateur' => $userData]);
-} else if ($endpoint === 'create-user') {
+} else if ($endpoint === 'create') {
     // Créer un utilisateur de test
     $result = $user->createUser(
-        "Dupont",
-        "Jean",
-        "jean123",
-        "jean@test.com",
-        "password123",
-        "1990-01-01",
-        "1 rue Test",
-        75000,
-        "Paris",
-        "12345",
+        $data['nom'],
+        $data['prenom'],
+        $data['pseudo'],
+        $data['email'],
+        $data['mdp'],
+        $data['date_naissance'],
+        $data['adresse'] ?? '',
+        $data['codePostal'] ?? 0,
+        $data['ville'] ?? '',
+        $data['permis'] ?? NULL,
         20,
-        "passager"
+        'passager'
     );
     echo json_encode(['message' => 'Utilisateur créé', 'result' => $result]);
 } else {
