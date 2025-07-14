@@ -50,3 +50,31 @@ CREATE TABLE reservation (
     FOREIGN KEY (covoiturage_id) REFERENCES covoiturage (id),
     FOREIGN KEY (passager_id) REFERENCES utilisateur (id)
 )
+
+ALTER TABLE utilisateur ADD COLUMN nom VARCHAR(100) AFTER id;
+
+ALTER TABLE utilisateur ADD COLUMN prenom VARCHAR(100) AFTER nom;
+
+ALTER TABLE utilisateur ADD COLUMN date_naissance DATE AFTER email;
+
+ALTER TABLE utilisateur
+ADD COLUMN adresse VARCHAR(255) AFTER date_naissance;
+
+ALTER TABLE utilisateur ADD COLUMN code_postal INT AFTER adresse;
+
+ALTER TABLE utilisateur
+ADD COLUMN ville VARCHAR(100) AFTER code_postal;
+
+ALTER TABLE utilisateur ADD COLUMN telephone VARCHAR(20) AFTER ville;
+
+ALTER TABLE utilisateur
+ADD COLUMN photo_profil VARCHAR(255) AFTER telephone;
+
+ALTER TABLE utilisateur
+ADD COLUMN date_premiere_circulation DATE AFTER photo_profil;
+
+ALTER TABLE covoiturage
+ADD COLUMN heure_depart TIME AFTER date_depart;
+
+ALTER TABLE covoiturage
+ADD COLUMN heure_arrivee TIME AFTER ville_arrivee;

@@ -18,7 +18,7 @@
 
     <?php
     // Mise en place monprofil provenant d'une autre page
-    require_once('../../admin/utilisateur/inscription.php');
+    require_once('../../admin/utilisateur/connexion.php');
 
 
     ?>

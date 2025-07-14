@@ -20,8 +20,8 @@
                 <input type="email" name="email" required>
                 <br><br>
 
-                <label for="password">Mot de passe :</label>
-                <input type="password" name="password" required>
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" name="mdp" required>
                 <br><br>
 
                 <input class="btn_connexion" type="submit" value="Se connecter">

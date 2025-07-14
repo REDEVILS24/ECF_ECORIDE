@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/profil.css">
     <link rel="stylesheet" href="/assets/styles/chartes.css">
-
-
-    <title>Profil</title>
+    <title>Mon Profil</title>
 </head>
 
 <body>
@@ -17,72 +15,51 @@
         <section class="section_info item1">
             <section>
                 <div class="nom info_utilisateur">
-                    nom
+                    <strong>Nom :</strong> <span id="nom"></span>
                 </div>
                 <div class="prenom info_utilisateur">
-                    prenom
+                    <strong>Prénom :</strong> <span id="prenom"></span>
                 </div>
-                <div class="age info_utilisateur">
-                    age
+                <div class="pseudo info_utilisateur">
+                    <strong>Pseudo :</strong> <span id="pseudo"></span>
                 </div>
-                <div class="adresse_mail info_utilisateur">
-                    adresse mail
-                </div>
-                <div class="adresse info_utilisateur">
-                    adresse postal
-                </div>
-                <div class="premiere_circulation info_utilisateur">
-                    date de premiere_circulation
-                </div>
-                <div class="energie info_utilisateur">
-                    energie
+                <div class="email info_utilisateur">
+                    <strong>Email :</strong> <span id="email"></span>
                 </div>
             </section>
             <section>
-                <div class="code_postal info_utilisateur">
-                    code postal
+                <div class="date_naissance info_utilisateur">
+                    <strong>Date de naissance :</strong> <span id="date_naissance"></span>
                 </div>
-                <div class="voiture info_utilisateur">
-                    voiture
+                <div class="role info_utilisateur">
+                    <strong>Rôle :</strong> <span id="role"></span>
                 </div>
-                <div class="telephone info_utilisateur">
-                    telephone
+                <div class="credits info_utilisateur">
+                    <strong>Crédits :</strong> <span id="credits"></span> €
                 </div>
-                <div class="type_utilisateur info_utilisateur">
-                    type_utilisateur
-                </div>
-                <div class="modele_voiture info_utilisateur">
-                    modele voiture
-                </div>
-                <div class="marque_voiture info_utilisateur">
-                    marque_voiture
-                </div>
-                <div class="couleur_voiture info_utilisateur">
-                    couleur_voiture
-                </div>
-
-
-
             </section>
         </section>
+
         <section class="bouton_profil item2">
             <div>
-                <button class="modifier_profil" type="button">Modifier le profil </button>
+                <button class="modifier_profil" type="button">Modifier le profil</button>
             </div>
             <div>
                 <button class="supprimer_compte" type="button">Supprimer le compte</button>
             </div>
-
-        </section>
-        <aside class="img_profil item3">
-            <div class="note"><img src="/IMAGE/note.jpg" alt=""></div>
-            <div class="pp">
-
-                <img src="/IMAGE/photoprofil.jpg" alt="">
+            <div>
+                <a href="/templates/voitures.php">
+                    <button class="mes_voitures" type="button">Mes voitures</button>
+                </a>
             </div>
-            <div class="photo_voiture">
+        </section>
 
-                <img src="/IMAGE/voiture.jpg" alt="">
+        <aside class="img_profil item3">
+            <div class="note">
+                <img src="/IMAGE/note.jpg" alt="Note utilisateur">
+            </div>
+            <div class="pp">
+                <img src="/IMAGE/photoprofil.jpg" alt="Photo de profil">
             </div>
         </aside>
     </section>

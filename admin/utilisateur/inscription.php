@@ -19,47 +19,23 @@
             <legend>Remplissez tout les champs </legend>
 
             <label for="nom">Nom:</label>
-            <input type="text" name="nom"><br>
+            <input type="text" name="nom" required><br>
 
             <label for="prenom">Prenom:</label>
-            <input type="text" name="prenom"><br>
-
-            <label for="age">Date de naissance:</label>
-            <input type="date" name="age"><br>
+            <input type="text" name="prenom" required><br>
 
             <label for="pseudo">Pseudo:</label>
-            <input type="text" name="pseudo"><br>
+            <input type="text" name="pseudo" required><br>
 
-            <label for="mail">Adresse mail:</label>
-            <input type="mail" name="mail"><br>
-
-            <label for="password">Mot de passe:</label>
-            <input type="password" name="password"><br>
-
-            <label for="password1">Mot de passe:</label>
-            <input type="password" name="password1"><br>
-
-            <label for="voiture">Voiture:</label>
-            <input type="text" name="Voiture"><br>
-            <label for="marque">marque:</label>
-            <input type="text" name="marque"><br>
-            <label for="modele">modele:</label>
-            <input type="text" name="modele"><br>
-            <label for="annee">annee:</label>
-            <input type="text" name="annee"><br>
-            <label for="energie">energie:</label>
-            <input type="text" name="energie"><br>
-            <label for="preference">Préference: </label>
-            <select name="preference">
-                <option value="">gazole</option>
-                <option value="">essence</option>
-                <option value="">electrique</option>
-            </select><br>
+            <label for="date_naissance">Date de naissance:</label>
+            <input type="date" name="date_naissance" required><br>
 
 
+            <label for="email">Adresse mail:</label>
+            <input type="email" name="email" required><br>
 
-            <label for="place">Place disponible:</label>
-            <input type="number" name="place" min="1" max="4"><br>
+            <label for="mdp">Mot de passe:</label>
+            <input type="password" name="mdp" required><br>
 
             <div class="btn_inscription">
                 <button class="btn_reset_inscri" type="reset" name="reset">Reset</button>
