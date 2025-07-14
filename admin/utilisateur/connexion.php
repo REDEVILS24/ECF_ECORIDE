@@ -15,7 +15,7 @@
         </div>
 
         <div class="formulaire">
-            <form class="connexion">
+            <form id="form-connexion" class="connexion">
                 <label for="email">Email :</label>
                 <input type="email" name="email" required>
                 <br><br>
@@ -24,7 +24,7 @@
                 <input type="password" name="mdp" required>
                 <br><br>
 
-                <input class="btn_connexion" type="submit" value="Se connecter">
+                <input id="btn-connexion" class="btn_connexion" type="submit" value="Se connecter">
             </form>
         </div>
     </section>
@@ -34,6 +34,7 @@
             <p><a href="/templates/home/inscription.php">S'inscrire</a></p>
         </div>
     </section>
+    <script src="/assets/scripts/connexion.js"></script>
 </body>
 
 </html>

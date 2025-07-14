@@ -14,6 +14,7 @@ $endpoint = $data['endpoint'] ?? 'default';
 
 header('Content-Type: application/json');
 
+session_start();
 
 $user = new User();
 
@@ -40,6 +41,31 @@ if ($endpoint === 'test') {
         'passager'
     );
     echo json_encode(['message' => 'Utilisateur créé', 'result' => $result]);
+} else if ($endpoint === 'login') {
+    // Connexion utilisateur
+    $loginResult = $user->login($data['email'], $data['mdp']);
+
+    if ($loginResult) {
+        // Démarrer une session
+        session_start();
+        $_SESSION['user_id'] = $loginResult['id'];
+        $_SESSION['user_email'] = $loginResult['email'];
+
+        echo json_encode([
+            'message' => 'Connexion réussie',
+            'result' => 1,
+            'user' => $loginResult
+        ]);
+    } else {
+        echo json_encode([
+            'message' => 'Email ou mot de passe incorrect',
+            'result' => 0
+        ]);
+    }
+
+} else if ($endpoint === 'profile') {
+    $userData = $user->getUserById($_SESSION['user_id']);
+    echo json_encode(['user' => $userData]);
 } else {
     echo json_encode(['message' => 'API fonctionne', 'url' => $url, 'method' => $method]);
 }

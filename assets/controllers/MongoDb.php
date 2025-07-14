@@ -27,6 +27,15 @@ class MongoDb
         $cursor = $collection->find();
         return $cursor->toArray();
     }
+    public function getVoituresByUser($proprietaire_id)
+    {
+        $collection = $this->database->selectCollection('voitures');
+        $cursor = $collection->find(
+            ['proprietaire_id' => $proprietaire_id],
+            ['limit' => 3]  // 
+        );
+        return $cursor->toArray();
+    }
     public function updateVoitures($id, $data)
     {
         $collection = $this->database->selectCollection('voitures');
@@ -71,8 +80,20 @@ class MongoDb
     public function insertPreference($data)
     {
         $collection = $this->database->selectCollection('preferences');
-        $result = $collection->insertOne($data);
-        return $result->getInsertedCount();
+        $utilisateur_id = $data['utilisateur_id'];
+        $existing = $collection->findOne(['utilisateur_id' => $utilisateur_id]);
+
+        if ($existing) {
+            // UPDATE : Remplacer les préférences existantes
+            $result = $collection->replaceOne(
+                ['utilisateur_id' => $utilisateur_id],
+                $data
+            );
+            return $result->getModifiedCount();
+        } else {
+            $result = $collection->insertOne($data);
+            return $result->getInsertedCount();
+        }
     }
 
     public function getPreferences()

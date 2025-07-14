@@ -12,10 +12,9 @@
 
 <body>
     <h1>Vos préferences</h1>
-    <form action="" method="post">
+    <form action="" method="post" id="form-preferences">
         <fieldset>
             <legend>Ajouter vos préferences !</legend>
-
 
             <label for="fumeur_accepte">Est ce que vous acceptez les fumeurs ? </label>
             <input type="checkbox" name="fumeur_accepte" value="true"><br>
@@ -52,13 +51,15 @@
             <input type="checkbox" name="pauses" value="true"><br>
 
             <div><button class="btn_covoit" type="reset" name="reset">Reset</button>
-                <button class="btn_covoit" type="submit" name="Publier">Valider les préferences</button>
+                <button id="btn-preferences" class="btn_covoit" type="submit" name="Publier">Valider les
+                    préferences</button>
             </div>
 
         </fieldset>
 
     </form>
 
+    <script src="/assets/scripts/preferences.js"></script>
 
 
 </body>

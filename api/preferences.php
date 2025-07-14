@@ -5,8 +5,12 @@ require_once('../assets/controllers/MongoDb.php');
 $url = $_SERVER["REQUEST_URI"];
 $method = $_SERVER["REQUEST_METHOD"];
 
-$endpoint = $_GET['endpoint'] ?? 'default';
+$json = file_get_contents('php://input');
+$data = json_decode($json, true);
+$endpoint = $data['endpoint'] ?? 'default';
 
+session_start();
+$utilisateur_id = $_SESSION['user_id'] ?? null;
 // Reponse JSON 
 
 header('Content-Type: application/json');
@@ -23,12 +27,18 @@ if ($endpoint === 'all') {
         'data' => $preferences
     ]);
 } else if ($endpoint === 'insert') {
+
     $donnees = [
-        'utilisateur_id' => $_GET['utilisateur_id'] ?? 0,
-        'fumeur' => $_GET['fumeur'] ?? false,
-        'animaux' => $_GET['animaux'] ?? false,
-        'musique' => $_GET['musique'] ?? ''
+        'fumeur_accepte' => $data['fumeur_accepte'] ?? false,
+        'animaux_acceptes' => $data['animaux_acceptes'] ?? false,
+        'type_musique' => $data['type_musique'] ?? '',
+        'discussion' => $data['discussion'] ?? '',
+        'temperature' => $data['temperature'] ?? '',
+        'pauses' => $data['pauses'] ?? false,
+        'utilisateur_id' => $utilisateur_id,
+        'date_creation' => date('Y-m-d H:i:s')
     ];
+
     $resultat = $mongo->insertPreference($donnees);
 
     echo json_encode([
@@ -39,10 +49,13 @@ if ($endpoint === 'all') {
     $id = $_GET['id'] ?? '';
 
     $donnees = [
-        'utilisateur_id' => $_GET['utilisateur_id'] ?? 0,
-        'fumeur' => $_GET['fumeur'] ?? false,
-        'animaux' => $_GET['animaux'] ?? false,
-        'musique' => $_GET['musique'] ?? ''
+        'fumeur_accepte' => $data['fumeur_accepte'] ?? false,
+        'animaux_acceptes' => $data['animaux_acceptes'] ?? false,
+        'type_musique' => $data['type_musique'] ?? '',
+        'discussion' => $data['discussion'] ?? '',
+        'temperature' => $data['temperature'] ?? '',
+        'pauses' => $data['pauses'] ?? false,
+        'utilisateur_id' => $utilisateur_id,
     ];
 
     $resultat = $mongo->updatePreference($id, $donnees);

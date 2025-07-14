@@ -22,11 +22,11 @@ class Covoiturage
         return $result;
     }
 
-    public function createCovoiturage($conducteur_id, $ville_depart, $ville_arrivee, $date_depart, $prix, $places_disponibles)
+    public function createCovoiturage($conducteur_id, $ville_depart, $ville_arrivee, $date_depart, $heure_depart, $prix, $places_disponibles)
     {
-        $sql = "INSERT INTO covoiturage(conducteur_id,ville_depart, ville_arrivee, date_depart, prix, places_disponibles) VALUES(?,?,?,?,?,?)";
+        $sql = "INSERT INTO covoiturage(conducteur_id,ville_depart, ville_arrivee, date_depart, heure_depart, prix, places_disponibles) VALUES(?,?,?,?,?,?,?)";
         $stmt = $this->db->prepare($sql);
-        $stmt->execute([$conducteur_id, $ville_depart, $ville_arrivee, $date_depart, $prix, $places_disponibles]);
+        $stmt->execute([$conducteur_id, $ville_depart, $ville_arrivee, $date_depart, $heure_depart, $prix, $places_disponibles]);
         return $stmt->rowCount();
     }
 

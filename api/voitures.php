@@ -5,8 +5,12 @@ require_once('../assets/controllers/MongoDb.php');
 $url = $_SERVER["REQUEST_URI"];
 $method = $_SERVER["REQUEST_METHOD"];
 
-$endpoint = $_GET['endpoint'] ?? 'default';
+$json = file_get_contents('php://input');
+$data = json_decode($json, true);
+$endpoint = $data['endpoint'] ?? 'default';
 
+session_start();
+$proprietaire_id = $_SESSION['user_id'] ?? null;
 // Reponse JSON 
 
 header('Content-Type: application/json');
@@ -24,11 +28,15 @@ if ($endpoint === 'all') {
     ]);
 } else if ($endpoint === 'insert') {
     $donnees = [
-        'marque' => $_GET['marque'] ?? '',
-        'modele' => $_GET['modele'] ?? '',
-        'couleur' => $_GET['couleur'] ?? '',
-        'electrique' => $_GET['electrique'] ?? false,
-        'proprietaire_id' => $_GET['proprietaire_id'] ?? 0
+        'marque' => $data['marque'] ?? '',
+        'modele' => $data['modele'] ?? '',
+        'couleur' => $data['couleur'] ?? '',
+        'annee' => $data['annee'] ?? 2025,
+        'energie' => $data['energie'] ?? "essence",
+        'nb_places' => $data['nb_places'] ?? 2,
+        'plaque' => $data['plaque'] ?? "",
+        'photos' => $data['photos'] ?? [],
+        'proprietaire_id' => $proprietaire_id
     ];
     $resultat = $mongo->insertVoiture($donnees);
 
@@ -40,11 +48,12 @@ if ($endpoint === 'all') {
     $id = $_GET['id'] ?? '';
 
     $donnees = [
-        'marque' => $_GET['marque'] ?? '',
-        'modele' => $_GET['modele'] ?? '',
-        'couleur' => $_GET['couleur'] ?? '',
-        'electrique' => $_GET['electrique'] ?? false,
-        'proprietaire_id' => $_GET['proprietaire_id'] ?? 0
+        'marque' => $data['marque'] ?? '',
+        'modele' => $data['modele'] ?? '',
+        'couleur' => $data['couleur'] ?? '',
+        'annee' => $data['annee'] ?? 2025,
+        'energie' => $data['energie'] ?? "essence",
+        'proprietaire_id' => $proprietaire_id
     ];
 
     $resultat = $mongo->updateVoitures($id, $donnees);
@@ -53,6 +62,9 @@ if ($endpoint === 'all') {
         'message' => 'Voiture modifiée',
         'result' => $resultat
     ]);
+} else if ($endpoint === 'mes-voitures') {
+    $mesVoitures = $mongo->getVoituresByUser($_SESSION['user_id']);
+    echo json_encode(['voitures' => $mesVoitures]);
 } else if ($endpoint === 'delete') {
 
     $id = $_GET['id'] ?? '';

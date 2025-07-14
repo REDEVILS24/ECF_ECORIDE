@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const codePostal = document.querySelector('input[name="codePostal"]');
   const ville = document.querySelector('input[name="ville"]');
   const permis = document.querySelector('input[name="permis"]');
+  const erreur_email = document.querySelector(".erreur_email");
 
   function validerInscription(e) {
     e.preventDefault();
@@ -62,7 +63,20 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Erreur:", error);
         alert("Problème de connexion");
       });
+    nomValue = "";
+  }
+
+  function validationEmail() {
+    const regex = /\w+@\w+\.\w+/;
+    const emailValue = email.value;
+
+    if (!regex.test(emailValue)) {
+      erreur_email.style.color = "red";
+      erreur_email.textContent = "Vous n'avez pas entrer d'email valide";
+    } else erreur_email.textContent = "";
   }
 
   form.addEventListener("submit", validerInscription);
+
+  email.addEventListener("input", validationEmail);
 });

@@ -31,8 +31,10 @@
             <input type="date" name="date_naissance" required><br>
 
 
+
             <label for="email">Adresse mail:</label>
             <input type="email" name="email" required><br>
+            <div class="erreur_email"></div>
 
             <label for="mdp">Mot de passe:</label>
             <input type="password" name="mdp" required><br>

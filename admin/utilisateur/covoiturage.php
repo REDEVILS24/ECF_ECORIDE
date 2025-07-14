@@ -12,7 +12,7 @@
 
 <body>
     <h1>Formulaire de covoiturage</h1>
-    <form action="" method="post">
+    <form action="" method="post" id="form-creation-trajet">
         <fieldset>
             <legend>Saisissez votre voyage </legend>
 
@@ -34,12 +34,13 @@
             <input type="number" name="places_disponibles" min="1" max="4" required><br>
 
             <div><button class="btn_covoit" type="reset" name="reset">Reset</button>
-                <button class="btn_covoit" type="submit" name="Publier">Publier le trajet</button>
+                <button id="btn-creation" class="btn_covoit" type="submit" name="Publier">Publier le trajet</button>
             </div>
 
         </fieldset>
 
     </form>
+    <script src="/assets/scripts/covoiturage.js"></script>
 
 
 

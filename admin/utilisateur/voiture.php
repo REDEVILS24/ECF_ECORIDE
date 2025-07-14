@@ -12,7 +12,8 @@
 
 <body>
     <h1>Ajouter une voiture</h1>
-    <form action="" method="post">
+    <form action="" method="post" id="form-ajout-voiture">
+
         <fieldset>
             <legend>Ajouter une voiture !</legend>
 
@@ -48,13 +49,14 @@
             <input type="file" name="photos" multiple accept="image/*"><br>
 
             <div><button class="btn_covoit" type="reset" name="reset">Reset</button>
-                <button class="btn_covoit" type="submit" name="Publier">Ajouter la voiture</button>
+                <button id="btn-ajout-voiture" class="btn_covoit" type="submit" name="Publier">Ajouter la
+                    voiture</button>
             </div>
 
         </fieldset>
 
     </form>
-
+    <script src="/assets/scripts/ajout-voiture.js"></script>
 
 
 </body>
