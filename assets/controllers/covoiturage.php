@@ -54,7 +54,16 @@ class Covoiturage
 
     public function getAllCovoiturage()
     {
-        $sql = "SELECT * FROM covoiturage ";
+        $sql = "SELECT   c.id, 
+        c.conducteur_id, 
+        c.ville_depart, 
+        c.ville_arrivee, 
+        c.date_depart, 
+        c.heure_depart, 
+        c.prix, 
+        c.places_disponibles,
+        u.pseudo  FROM covoiturage c 
+INNER JOIN utilisateur u ON c.conducteur_id = u.id";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();

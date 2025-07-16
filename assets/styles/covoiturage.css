@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   text-align: center;
   font-size: var(--h1-size);
@@ -23,7 +30,9 @@ fieldset {
   color: var(--secondaire);
   text-transform: uppercase;
   padding: 10px;
+  margin-bottom: 10px;
 }
+
 fieldset input {
   text-align: center;
 }
@@ -50,4 +59,134 @@ form {
   font-size: var(--h3-size);
   cursor: pointer;
   font-weight: bold;
+}
+
+/* === POPUP STYLES === */
+.popup-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.205);
+  z-index: 1200;
+  overflow: hidden;
+  cursor: pointer;
+}
+.popup-hidden {
+  display: none;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: solid 10px var(--secondaire);
+  border-radius: 15px;
+  max-width: 400px;
+  min-width: 150px;
+  position: relative;
+  padding: 15px;
+  z-index: 2000;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  text-align: center;
+  color: var(--primaire);
+  font-size: var(--h1-size);
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.popup-content {
+  gap: 10px;
+  text-align: start;
+  color: var(--secondaire);
+  font-size: var(--h2-size);
+}
+
+.popup-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  margin-top: 15px;
+  align-self: center;
+}
+.popup-actions button {
+  width: 150px;
+  border-radius: 20px;
+  font-size: var(--h3-size);
+}
+#btnAnnulerPopup {
+  background-color: var(--accent);
+  color: var(--erreur);
+}
+
+#btnConfirmerPopup {
+  background-color: var(--primaire);
+  color: var(--white);
+}
+
+#btnAnnulerPopup:hover {
+  background-color: var(--accent);
+  color: var(--erreur);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnConfirmerPopup:hover {
+  background-color: var(--primaire);
+  color: var(--accent);
+  transform: scale(1.1);
+  font-size: var(--h3-size);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: solid 10px var(--secondaire);
+  border-radius: 15px;
+  max-width: 400px;
+  min-width: 150px;
+  position: relative;
+  padding: 15px;
+  z-index: 2000;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.trajet-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: solid 10px var(--secondaire);
+  border-radius: 15px;
+  max-width: 600px;
+  min-width: 150px;
+  position: relative;
+  padding: 15px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: var(--h3-size);
+}
+
+.btnValider {
+  margin-top: 10px;
+  font-size: var(--h3-size);
+  color: var(--primaire);
+  border-radius: 20px;
 }

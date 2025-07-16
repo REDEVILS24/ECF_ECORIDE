@@ -1,10 +1,13 @@
 <?php
 require_once('../assets/controllers/covoiturage.php');
 
+session_start();
+
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
 
-session_start();
+
+
 $conducteur_id = $_SESSION['user_id'] ?? null;
 
 if (!$conducteur_id) {
@@ -20,6 +23,7 @@ $covoiturage = new Covoiturage();
 if ($endpoint === 'all') {
     $data = $covoiturage->getAllCovoiturage();
     echo json_encode(['covoiturages' => $data]);
+
 } else if ($endpoint === 'createCovoiturage') {
 
     $result = $covoiturage->createCovoiturage(

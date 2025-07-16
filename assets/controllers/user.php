@@ -104,21 +104,19 @@ class User
         return $stmt->rowCount();
     }
 
-    public function login($email, $mdp)
+    public function login($email, $password)
     {
-        $sql = "SELECT * FROM utilisateur WHERE email= ?";
+        $sql = "SELECT * FROM utilisateur WHERE email = ?";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if ($user && password_verify($mdp, $user['mdp'])) {
-            return $user;
-        } else {
-            return false;
+        if ($user && password_verify($password, $user['mdp'])) {
+            return $user; // Connexion réussie
         }
-
-
+        return false; // Échec
     }
+
     public function updateCredits($userId, $montant)
     {
         $sql = "UPDATE utilisateur SET credits = credits + ? WHERE id = ?";

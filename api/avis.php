@@ -5,7 +5,11 @@ require_once('../assets/controllers/MongoDb.php');
 $url = $_SERVER["REQUEST_URI"];
 $method = $_SERVER["REQUEST_METHOD"];
 
-$endpoint = $_GET['endpoint'] ?? 'default';
+$json = file_get_contents('php://input');
+$data = json_decode($json, true);
+
+$endpoint = $data['endpoint'] ?? 'default';
+
 
 // Reponse JSON 
 

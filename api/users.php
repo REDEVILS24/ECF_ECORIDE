@@ -42,12 +42,11 @@ if ($endpoint === 'test') {
     );
     echo json_encode(['message' => 'Utilisateur créé', 'result' => $result]);
 } else if ($endpoint === 'login') {
-    // Connexion utilisateur
+
     $loginResult = $user->login($data['email'], $data['mdp']);
 
     if ($loginResult) {
         // Démarrer une session
-        session_start();
         $_SESSION['user_id'] = $loginResult['id'];
         $_SESSION['user_email'] = $loginResult['email'];
 
@@ -66,6 +65,9 @@ if ($endpoint === 'test') {
 } else if ($endpoint === 'profile') {
     $userData = $user->getUserById($_SESSION['user_id']);
     echo json_encode(['user' => $userData]);
+} else if ($endpoint === 'logout') {
+    session_destroy();
+    echo json_encode(['message' => 'Déconnexion réussie', 'result' => 1]);
 } else {
     echo json_encode(['message' => 'API fonctionne', 'url' => $url, 'method' => $method]);
 }

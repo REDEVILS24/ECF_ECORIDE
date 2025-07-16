@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const email = document.querySelector('input[name="email"]');
   const mdp = document.querySelector('input[name="mdp"]');
 
-  function validerConnexion(event) {
-    event.preventDefault();
+  function validerConnexion(e) {
+    e.preventDefault();
 
     const emailValue = email.value;
     const mdpValue = mdp.value;
@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         if (data.result === 1) {
-          alert("Connexion réussie !");
-          // Redirection vers le dashboard ou page d'accueil
-          window.location.href = "/templates/home/index.php"; // ← Adapte selon tes pages
+          window.location.href = "/templates/home/index.php";
         } else {
           alert("Email ou mot de passe incorrect");
         }
