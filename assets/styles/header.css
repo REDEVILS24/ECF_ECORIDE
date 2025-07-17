@@ -177,3 +177,19 @@ li:hover {
     margin-left: 5%;
   }
 }
+
+.menu-connecte {
+  display: none;
+}
+
+.menu-non-connecte {
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}

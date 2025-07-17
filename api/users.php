@@ -10,7 +10,6 @@ $data = json_decode($json, true);
 
 $endpoint = $data['endpoint'] ?? 'default';
 
-// Reponse JSON 
 
 header('Content-Type: application/json');
 
@@ -49,11 +48,12 @@ if ($endpoint === 'test') {
         // Démarrer une session
         $_SESSION['user_id'] = $loginResult['id'];
         $_SESSION['user_email'] = $loginResult['email'];
+        $_SESSION['user_role'] = $loginResult['role'];
 
         echo json_encode([
             'message' => 'Connexion réussie',
             'result' => 1,
-            'user' => $loginResult
+            'role' => $loginResult['role']
         ]);
     } else {
         echo json_encode([
@@ -66,8 +66,18 @@ if ($endpoint === 'test') {
     $userData = $user->getUserById($_SESSION['user_id']);
     echo json_encode(['user' => $userData]);
 } else if ($endpoint === 'logout') {
+
     session_destroy();
+
     echo json_encode(['message' => 'Déconnexion réussie', 'result' => 1]);
+
+} else if ($endpoint === 'checkSession') {
+
+    if (isset($_SESSION['user_id'])) {
+        echo json_encode(['connected' => true, 'user_id' => $_SESSION['user_id'], 'email' => $_SESSION['user_email'], 'role' => $_SESSION['user_role'] ?? 'utilisateur']);
+    } else {
+        echo json_encode(['connected' => false]);
+    }
 } else {
     echo json_encode(['message' => 'API fonctionne', 'url' => $url, 'method' => $method]);
 }

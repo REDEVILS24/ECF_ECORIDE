@@ -3,8 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const formRecherche = document.getElementById("formRecherche");
   const dateDepart = document.querySelector('input[name="date_depart"]');
   const dateArrivee = document.querySelector('input[name="date_arrivee"]');
-  const villeDepart = document.querySelector('input[name="ville_depart"]');
-  const villeArrivee = document.querySelector('input[name="ville_arrivee"]');
+  const villeDepart = document.querySelector(
+    '#formRecherche input[name="ville_depart"]'
+  );
+  const villeArrivee = document.querySelector(
+    '#formRecherche input[name="ville_arrivee"]'
+  );
   const nbPassager = document.querySelector('input[name="passager"]');
   const btnRecherche = document.querySelector(".btn_rechercher");
   const btnReserver = document.getElementById("reserver");
@@ -16,7 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
   let trajetSelectionne = null;
 
   function rechercheCovoiturage(e) {
+    console.log("FONCTION RECHERCHE APPELÉE !");
     e.preventDefault();
+
+    const depart = villeDepart.value.trim().toLowerCase();
+    const arrivee = villeArrivee.value.trim().toLowerCase();
+
+    if (!depart && !arrivee) {
+      alert("Veuillez saisir au moins une ville");
+      return;
+    }
+
+    afficherListeCovoiturage(depart, arrivee);
   }
   function ouvrirPopup() {
     popupHidden.classList.remove("popup-hidden");
@@ -53,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  function afficherListeCovoiturage() {
+  function afficherListeCovoiturage(filtreDepart = "", filtreArrivee = "") {
     const donnees = {
       endpoint: "all",
     };
@@ -77,8 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
           const dateFrancaise = new Date(trajet.date_depart).toLocaleDateString(
             "fr-FR"
           );
-
-          if (dateTrajet >= dateNow) {
+          const departMatch =
+            !filtreDepart ||
+            trajet.ville_depart.toLowerCase().includes(filtreDepart);
+          const arriveeMatch =
+            !filtreArrivee ||
+            trajet.ville_arrivee.toLowerCase().includes(filtreArrivee);
+          if (dateTrajet >= dateNow && departMatch && arriveeMatch) {
             noRes.style.display = "none";
             const div = document.createElement("div");
             div.className = "trajet-item";

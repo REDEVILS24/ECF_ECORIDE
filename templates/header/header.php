@@ -27,12 +27,13 @@
             <nav>
                 <ul class="liste">
                     <li><a href="/templates/home/index.php">Accueil</a></li>
-                    <li><a href="/templates/home/covoiturage.php">Covoiturage</a></li>
-                    <li><a href="/templates/home/inscription.php">Inscription</a></li>
+                    <li><a href="/templates/home/covoiturage.php" class="menu-connecte">Covoiturage</a></li>
+                    <li><a href="/templates/home/inscription.php" class="menu-non-connecte">Inscription</a></li>
                     <li><a href="/templates/home/reservation.php">Reservation</a></li>
-                    <li><a href="/templates/home/connexion.php">Connexion</a></li>
-                    <li><a href="/templates/home/index.php" id="btn-deconnexion">Deconnexion</a></li>
-                    <li><a href="/templates/home/profil.php">Mon profil</a></li>
+                    <li><a href="/templates/home/connexion.php" class="menu-non-connecte">Connexion</a></li>
+                    <li><a href="/templates/home/index.php" id="btn-deconnexion" class="menu-connecte">Deconnexion</a>
+                    </li>
+                    <li><a href="/templates/home/profil.php" class="menu-connecte">Mon profil</a></li>
                     <li><a href="#">Contact</a></li>
                     <li class="navigation recherche_responsive">
                         <input type="search" name="recherche">
@@ -60,6 +61,7 @@
 
     </script>
     <script src="/assets/scripts/deconnexion.js"></script>
+    <script src="/assets/scripts/affichage.js"></script>
 </body>
 
 </html>
