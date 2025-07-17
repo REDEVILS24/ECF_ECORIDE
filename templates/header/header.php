@@ -28,8 +28,8 @@
                 <ul class="liste">
                     <li><a href="/templates/home/index.php">Accueil</a></li>
                     <li><a href="/templates/home/covoiturage.php" class="menu-connecte">Covoiturage</a></li>
-                    <li><a href="/templates/home/inscription.php" class="menu-non-connecte">Inscription</a></li>
-                    <li><a href="/templates/home/reservation.php">Reservation</a></li>
+                    <li><a href="/templates/home/inscription.php" class="menu-connecte">Inscription</a></li>
+                    <li><a href="/templates/home/reservation.php" class="menu-connecte">Reservation</a></li>
                     <li><a href="/templates/home/connexion.php" class="menu-non-connecte">Connexion</a></li>
                     <li><a href="/templates/home/index.php" id="btn-deconnexion" class="menu-connecte">Deconnexion</a>
                     </li>
