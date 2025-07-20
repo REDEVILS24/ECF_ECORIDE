@@ -16,7 +16,7 @@
     <section class="footer">
         <div class="informations">
             <p class="a">
-                <a href="#">Informations légales</a>
+                <a href="/templates/home/rgpd.php">Informations légales</a>
             </p>
             <p class="a">
                 <a href="#">Paramètres des cookies</a>

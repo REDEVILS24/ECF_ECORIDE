@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column !important;
+  gap: 10px;
+}
+
+h2 {
+  color: var(--secondaire);
+  font-size: var();
+}
+
+.liste1 {
+  display: flex;
+  flex-direction: column;
+}

@@ -71,11 +71,11 @@ L'application permet aux utilisateurs de proposer et rechercher des trajets en c
 
 ### Comptes de test disponibles
 
-| Rôle        | Email          | Mot de passe | Crédits |
-| ----------- | -------------- | ------------ | ------- |
-| Admin       | admin@test.com | admin58      | 100     |
-| Utilisateur | user1@test.com | user123      | 50      |
-| Utilisateur | user2@test.com | user456      | 30      |
+| Rôle                              | Email               | Mot de passe | Crédits |
+| --------------------------------- | ------------------- | ------------ | ------- |
+| Admin                             | admin@ecoride.com   | Admin123!    | 100     |
+| utilisateur (avec voitures)       | conducteur@test.com | Conduc123!   | 75      |
+| utilisateur (passager uniquement) | passager@test.com   | Pass123!     | 50      |
 
 ### Guide rapide
 

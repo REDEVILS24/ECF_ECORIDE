@@ -28,13 +28,13 @@
                 <ul class="liste">
                     <li><a href="/templates/home/index.php">Accueil</a></li>
                     <li><a href="/templates/home/covoiturage.php" class="menu-connecte">Covoiturage</a></li>
-                    <li><a href="/templates/home/inscription.php" class="menu-connecte">Inscription</a></li>
+                    <li><a href="/templates/home/inscription.php" class="menu-non-connecte">Inscription</a></li>
                     <li><a href="/templates/home/reservation.php" class="menu-connecte">Reservation</a></li>
                     <li><a href="/templates/home/connexion.php" class="menu-non-connecte">Connexion</a></li>
                     <li><a href="/templates/home/index.php" id="btn-deconnexion" class="menu-connecte">Deconnexion</a>
                     </li>
                     <li><a href="/templates/home/profil.php" class="menu-connecte">Mon profil</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/templates/home/contact.php">Contact</a></li>
                     <li class="navigation recherche_responsive">
                         <input type="search" name="recherche">
                         <button class="btn_recherche">Rechercher</button>
