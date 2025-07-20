@@ -11,9 +11,6 @@ temp/
 # Données MySQL
 mysql/data/
 
-# Fichiers Docker (optionnel selon ton choix)
-/dockerfile
-/docker-compose.yml
 
 # Dossiers spécifiques si nécessaire
 image/
