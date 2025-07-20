@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/charte.css">
     <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="/assets/styles/contact.css">
 
-    <title>Covoiturage</title>
+
+
+    <title>Contact - EcoRide</title>
 </head>
 
 <body>
@@ -16,10 +19,13 @@
         <h1>Nous Contacter</h1>
 
         <div class="contact-info">
-            <p>Développeur : Taieb MIMOUNI</p>
-            <p>Email : taieb.mimouni@hotmail.fr</p>
-            <p>Projet : ECF Développeur Web et Web Mobile</p>
-            <p>Date : Juillet 2025</p>
+            <h2>Informations du Projet</h2>
+            <p><strong>Développeur :</strong> Taieb MIMOUNI</p>
+            <p><strong>Email :</strong> taieb.mimouni@hotmail.fr</p>
+            <p><strong>Formation :</strong> Titre Professionnel Développeur Web et Web Mobile</p>
+            <p><strong>Projet :</strong> ECF - Plateforme EcoRide</p>
+            <p><strong>Date :</strong> Juillet 2025</p>
+            <p><strong>Contexte :</strong> Projet de démonstration technique</p>
         </div>
 
     </section>

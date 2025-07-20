@@ -40,13 +40,8 @@
             </section>
         </section>
 
-        <section class="bouton_profil item2">
-            <div>
-                <button class="modifier_profil" type="button">Modifier le profil</button>
-            </div>
-            <div>
-                <button class="supprimer_compte" type="button">Supprimer le compte</button>
-            </div>
+        <section class="bouton_profil item4">
+
             <div>
                 <a href="/templates/home/voiture.php">
                     <button class="mes_voitures modifier_profil" type="button">Mes voitures</button>
@@ -56,6 +51,12 @@
                 <a href="../../templates/home/preferences.php">
                     <button class="mes_preferences modifier_profil" type="button">Mes preferences</button>
                 </a>
+            </div>
+            <div>
+                <button class="modifier_profil" type="button">Modifier le profil</button>
+            </div>
+            <div>
+                <button class="supprimer_compte" type="button">Supprimer le compte</button>
             </div>
         </section>
 

@@ -34,19 +34,12 @@
                 </div>
 
                 <div class="voiture_actions">
-                    <button class="modifier_voiture" type="button" data-id="">Modifier</button>
-                    <button class="supprimer_voiture" type="button" data-id="">Supprimer</button>
+                    <button class="modifier_preference" type="button" data-id="">Modifier</button>
+                    <button class="supprimer_preference" type="button" data-id="">Supprimer</button>
                 </div>
             </div>
         </section>
 
-
-        <section class="aucune_voiture" id="aucune_voiture" style="display: none;">
-            <p>Vous n'avez encore ajouté aucune voiture.</p>
-            <a href="/templates/ajouter-voiture.php">
-                <button class="ajouter_premiere_voiture">Ajouter ma première voiture</button>
-            </a>
-        </section>
 
         <section class="navigation">
             <a href="../../templates/home/profil.php">

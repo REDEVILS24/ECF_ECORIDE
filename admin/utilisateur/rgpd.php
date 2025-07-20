@@ -18,23 +18,26 @@
             <h1>Mentions Légales et Protection des Données</h1>
 
             <h2>1. Éditeur du Site</h2>
-            <p>Nom : Taieb MIMOUNI</p>
-            <p>Statut : Étudiant en formation</p>
-            <p>Formation : Titre Professionnel Développeur Web et Web Mobile</p>
-            <p>Email : taieb.mimouni@hotmail.fr</p>
-            <p>Contexte : Projet réalisé dans le cadre de l'ECF</p>
-
-            <h2>2. Données Collectées</h2>
-            <p>Dans le cadre de ce projet de démonstration, nous collectons :</p>
             <ul class="liste1">
+                <li>Nom : Taieb MIMOUNI</li>
+                <li>Statut : Étudiant en formation</li>
+                <li>Formation : Titre Professionnel Développeur Web et Web Mobile</li>
+                <li>Email : taieb.mimouni@hotmail.fr</li>
+                <li>Contexte : Projet réalisé dans le cadre de l'ECF</li>
+            </ul>
+            <h2>2. Données Collectées</h2>
+            <ul class="liste1">
+                <li>Dans le cadre de ce projet de démonstration, nous collectons :</li>
+
                 <li>Informations d'inscription (nom, prénom, email, adresse)</li>
                 <li>Données de connexion (email, mot de passe haché)</li>
                 <li>Informations de trajet (villes, dates, prix)</li>
             </ul>
 
             <h2>3. Finalité du Traitement</h2>
-            <p> Les données sont utilisées exclusivement pour :</p>
             <ul class="liste1">
+                <li> Les données sont utilisées exclusivement pour :</li>
+
                 <li>Le fonctionnement de la plateforme de covoiturage</li>
                 <li>La gestion des comptes utilisateurs</li>
                 <li>La création et réservation de trajets</li>
@@ -42,28 +45,32 @@
             </ul>
 
             <h2>4. Vos Droits</h2>
-            <p>Conformément au RGPD, vous disposez des droits suivants :</p>
             <ul class="liste1">
+                <li>Conformément au RGPD, vous disposez des droits suivants :</li>
+
                 <li>Droit d'accès à vos données</li>
                 <li>Droit de rectification</li>
                 <li>Droit à l'effacement</li>
                 <li>Droit à la portabilité</li>
                 <li>Droit d'opposition</li>
+
+                <li>Pour exercer ces droits, contactez : taieb.mimouni@hotmail.fr</li>
             </ul>
-            <p>Pour exercer ces droits, contactez : taieb.mimouni@hotmail.fr</p>
 
             <h2>5. Sécurité</h2>
-            <p>Mesures de sécurité mises en place :</p>
             <ul class="liste1">
+                <p>Mesures de sécurité mises en place :</p>
                 <li>Mots de passe hachés avec password_hash() PHP</li>
                 <li>Requêtes préparées contre les injections SQL</li>
                 <li>Sessions PHP sécurisées</li>
                 <li>Validation des données côté serveur</li>
             </ul>
             <h2>6. Contact</h2>
-            <p>Pour toute question relative à la protection de vos données :</p>
-            <p>Email : taieb.mimouni@hotmail.fr</p>
-            <p>Responsable du traitement : Taieb MIMOUNI</p>
+            <ul class="liste1">
+                <li>Pour toute question relative à la protection de vos données :</li>
+                <li>Email : taieb.mimouni@hotmail.fr</li>
+                <li>Responsable du traitement : Taieb MIMOUNI</li>
+            </ul>
         </div>
     </section>
 

@@ -15,7 +15,7 @@
     <section class="container">
 
         <section class="actions">
-            <a href="/templates/ajouter-voiture.php">
+            <a href="/templates/home/ajout_voiture.php">
                 <button class="ajouter_voiture" type="button">Ajouter une voiture</button>
             </a>
         </section>
@@ -90,7 +90,7 @@
 
         <section class="aucune_voiture" id="aucune_voiture" style="display: none;">
             <p>Vous n'avez encore ajouté aucune voiture.</p>
-            <a href="/templates/ajouter-voiture.php">
+            <a href="/templates/home/ajout_voiture.php">
                 <button class="ajouter_premiere_voiture">Ajouter ma première voiture</button>
             </a>
         </section>

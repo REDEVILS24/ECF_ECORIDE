@@ -1,0 +1,24 @@
+.contact {
+  text-align: center;
+  font-size: var(--h2-size);
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.contact-info {
+  border: solid 5px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+}
