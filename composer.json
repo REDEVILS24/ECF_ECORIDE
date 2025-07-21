@@ -1,6 +1,9 @@
 {
   "name": "ecoride/app",
   "require": {
+    "php": "^8.0",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
     "mongodb/mongodb": "^2.1"
   }
 }
