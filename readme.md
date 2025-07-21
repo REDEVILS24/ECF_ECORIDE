@@ -77,6 +77,29 @@ L'application permet aux utilisateurs de proposer et rechercher des trajets en c
 | utilisateur (avec voitures)       | conducteur@test.com | Conduc123!   | 75      |
 | utilisateur (passager uniquement) | passager@test.com   | Pass123!     | 50      |
 
+## 🌐 Déploiement
+
+**Site en ligne** : https://ecf-ecoride-mimounitaieb-87e15deda74d.herokuapp.com/templates/home/index.php
+
+### Plateforme de déploiement
+
+- **Hébergeur** : Heroku
+- **Base de données** : JawsDB MySQL (add-on Heroku)
+- **URL de production** : https://ecf-ecoride-mimounitaieb-87e15deda74d.herokuapp.com/
+
+### Comptes de test en production
+
+Les mêmes comptes de test sont disponibles sur la version déployée :
+
+- **Admin** : admin@ecoride.com / Admin123!
+- **Conducteur** : conducteur@test.com / Conduc123!
+- **Passager** : passager@test.com / Pass123!
+
+### Outils de gestion de projet
+
+- **Trello** : https://trello.com/b/nBO2xQlU/ecoride
+- **GitHub** : https://github.com/REDEVILS24/ECF_ECORIDE
+
 ### Guide rapide
 
 1. Connectez-vous avec un des comptes ci-dessus
