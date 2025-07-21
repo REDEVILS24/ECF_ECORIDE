@@ -1,28 +1,34 @@
 <?php
-require_once 'admin/bdd/config.php';
+echo "=== TEST DE CONNEXION HEROKU ===<br><br>";
 
-echo "<h2>🔍 Test de connexion EcoRide</h2>";
+if (getenv('JAWSDB_URL')) {
+    echo "✅ JAWSDB_URL trouvée !<br>";
+    $url = parse_url(getenv('JAWSDB_URL'));
+    echo "Host: " . $url["host"] . "<br>";
+    echo "User: " . $url["user"] . "<br>";
+    echo "Database: " . substr($url["path"], 1) . "<br>";
+    echo "Port: " . $url["port"] . "<br><br>";
 
-try {
-    $db = Database::connect();
-    echo "✅ Connexion réussie à la base de données !<br>";
+    try {
+        $pdo = new PDO(
+            "mysql:host=" . $url["host"] . ";port=" . $url["port"] . ";dbname=" . substr($url["path"], 1),
+            $url["user"],
+            $url["pass"]
+        );
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "🎉 CONNEXION MYSQL RÉUSSIE !<br><br>";
 
-    // Test simple
-    $query = $db->query("SHOW TABLES");
-    $tables = $query->fetchAll();
-    echo "📊 Nombre de tables : " . count($tables) . "<br>";
+        // Test de création de table
+        $pdo->exec("CREATE TABLE IF NOT EXISTS test_table (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50))");
+        echo "✅ Création de table OK !<br>";
 
-    if (count($tables) > 0) {
-        echo "<ul>";
-        foreach ($tables as $table) {
-            echo "<li>" . $table[0] . "</li>";
-        }
-        echo "</ul>";
-    } else {
-        echo "⚠️ Aucune table trouvée - il faut créer la structure !";
+        $pdo->exec("INSERT INTO test_table (name) VALUES ('test_heroku')");
+        echo "✅ Insertion de données OK !<br>";
+
+    } catch (Exception $e) {
+        echo "❌ ERREUR DE CONNEXION: " . $e->getMessage() . "<br>";
     }
-
-} catch (Exception $e) {
-    echo "❌ Erreur : " . $e->getMessage();
+} else {
+    echo "❌ JAWSDB_URL non trouvée !";
 }
 ?>
