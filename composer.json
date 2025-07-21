@@ -1,3 +1,6 @@
-{"name": "ecoride/app", "require": {
-        "mongodb/mongodb": "^2.1"
-    }}
+{
+  "name": "ecoride/app",
+  "require": {
+    "mongodb/mongodb": "^2.1"
+  }
+}

@@ -1,7 +1,11 @@
 <?php
-// Charger le fichier .env
 function loadEnv($path)
 {
+    // Si on est sur Heroku, pas besoin du .env
+    if (getenv('JAWSDB_URL')) {
+        return;
+    }
+
     if (!file_exists($path)) {
         throw new Exception('.env file not found');
     }
@@ -15,7 +19,6 @@ function loadEnv($path)
     }
 }
 
-// Charger les variables
 loadEnv(__DIR__ . '/../../.env');
 
 class Database
@@ -26,15 +29,25 @@ class Database
     private static $dbPassword;
     private static $connection = null;
 
-
     public static function connect()
     {
         // Initialiser les variables si pas déjà fait
         if (self::$dbHost === null) {
-            self::$dbHost = $_ENV['DB_HOST'];
-            self::$dbName = $_ENV['DB_NAME'];
-            self::$dbUser = $_ENV['DB_USER'];
-            self::$dbPassword = $_ENV['DB_PASSWORD'];
+            // NOUVEAU : Détection Heroku
+            if (getenv('JAWSDB_URL')) {
+                // Configuration Heroku
+                $url = parse_url(getenv('JAWSDB_URL'));
+                self::$dbHost = $url["host"];
+                self::$dbUser = $url["user"];
+                self::$dbPassword = $url["pass"];
+                self::$dbName = substr($url["path"], 1);
+            } else {
+                // Configuration locale (.env)
+                self::$dbHost = $_ENV['DB_HOST'];
+                self::$dbName = $_ENV['DB_NAME'];
+                self::$dbUser = $_ENV['DB_USER'];
+                self::$dbPassword = $_ENV['DB_PASSWORD'];
+            }
         }
 
         try {
